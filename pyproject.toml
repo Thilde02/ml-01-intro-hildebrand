@@ -28,7 +28,6 @@ dependencies = [
     "matplotlib" # plotting library for static, animated, and interactive visualizations in Python
 ]
 
-
 [project.optional-dependencies]
 dev = [
     # WHY: Only used during development, not required for running the package.
