@@ -23,56 +23,76 @@ to get the example projects running on your machine.
 
 ## Phase 4. Technical Modification
 
-Describe your small technical modification to the example project.
+For my technical modification, I updated the values used for the example student in the prediction section of the application (`predict_example()` in `app_case.py`).
 
-Include:
+### What I Changed
 
-- What you changed
-- Why you chose that change
-- How you verified that it worked
-- What result, output, chart, metric, or behavior confirmed the change
+I changed the example student's information from:
 
-Compared with the example project,
-explain what is different and why the change matters.
+- Hours studied: 6.5 → 8.0
+- Practice quizzes: 4 → 5
+- Attendance: 92% → 98%
+- Sleep hours: 7.0 → 8.0
+- Prior score: 72 → 85
 
-Was it easy, or surprisingly challenging and why do you think so?
+### Why I Chose This Change
 
-## Phase 5. Custom Project (OPTIONAL in Module 1)
+I wanted to make a small, safe modification that would demonstrate how changing the input features affects the machine learning model's prediction without changing the overall program.
 
-Describe your custom project.
+### How I Verified It Worked
 
-In Module 1, this includes choosing a dataset, identifying a target,
-and explaining what kind of ML problem it represents.
+After saving the changes, I reran the application using:
 
-### Basis and Data
+```text
+uv run python -m mlstudio.app_case
+```
 
-Describe the dataset, input, or example you started with.
+The program completed successfully, displayed the charts, and generated a new prediction.
 
-Include:
+### Results
 
-- The original example dataset or input
-- The data source
-- Why you chose it, kept it, or changed it
-- Any important limitations or assumptions
+Before my modification, the predicted score was:
 
-### Modeling Approach
+**83.4**
 
-Describe the problem type and approach for this project.
+After my modification, the predicted score increased to:
 
-Include:
+**93.6**
 
-- Is this supervised or unsupervised and how do you know
+This demonstrated that the model responded appropriately to stronger student performance inputs.
 
-### Summary
+### Reflection
 
-Summarize your custom project.
+This modification was straightforward because the project was already working correctly. It helped me better understand how machine learning models use feature values to make predictions and how small code changes can affect model output.
 
-Include:
+---
 
-- How you implemented your custom work
-- What results you got
-- What you learned
-- How well you exercised the skills covered in this project
-- What kinds of real problems you could apply these skills to in the future
+# Phase 5. Custom Project (Module 1)
 
-Display at least one image or screenshot showing your work.
+## Basis and Data
+
+For Module 1, I continued using the example student performance dataset included with the project. The dataset contains information such as hours studied, attendance, practice quizzes, sleep hours, prior score, and final score.
+
+This dataset is appropriate for learning because it is small, easy to understand, and demonstrates a complete machine learning workflow.
+
+## Modeling Approach
+
+This project uses **supervised machine learning** because the dataset contains a known target variable (`score`) that the model predicts using several input features.
+
+Because the target is a continuous numeric value, this is a **regression** problem.
+
+## Summary
+
+Although Phase 5 is optional in Module 1, I continued exploring the example project by modifying the prediction inputs and observing how the model responded.
+
+Working through this project helped me better understand:
+
+- setting up a professional Python project
+- running machine learning workflows
+- reading project documentation
+- making small code modifications
+- interpreting prediction results
+
+In future projects I could apply these same skills to larger datasets such as housing prices, medical predictions, customer purchasing behavior, or student performance data.
+
+![Screenshot of the successful machine learning project execution showing the updated prediction results.](image.png)
